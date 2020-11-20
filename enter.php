@@ -1,4 +1,5 @@
 <?php
+//test
 class classMem
 {
     private $className, $StuNam, $StuGender, $StuNum;
