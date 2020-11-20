@@ -1,14 +1,16 @@
 <?php
-//test
 class classMem
 {
     private $className, $StuNam, $StuGender, $StuNum;
-     function setMem($className, $StuNam, $StuGender, $StuNum)
+    private $userdata=array("className","StuNam","StuGender","StuNum");
+    function setMem($className, $StuNam, $StuGender, $StuNum)
     {
-        $this->className=$className;
-        $this->StuNam=$StuNam;
-        $this->StuGender=$StuGender;
-        $this->StuNum=$StuNum;
+       $i=0;
+       while(count($userdata)<4)
+       {
+        $this->{$this->userdata[$i]}=$_POST["{$this->userdata[$i]}"];
+        $i++;
+       }
     }
     function getMem()
     {
